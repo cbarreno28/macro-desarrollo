@@ -7,6 +7,10 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+
+        'views/student_views.xml',
+
+        'views/menu_views.xml'
     ],
     'installable': True,
     'application': True,

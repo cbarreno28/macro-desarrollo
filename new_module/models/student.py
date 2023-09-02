@@ -15,6 +15,8 @@ class Student(models.Model):
     value = fields.Float('Value')
     active = fields.Boolean('Active')
 
+    tag_ids = fields.Many2many('student.tags', 'student_tag_rel', 'student_id', 'tag_id', 'Tags') # Parametros Tabla, nombre de la relacion, fk1, fk2, Nombre del string
+
     class_id = fields.Many2one('class', 'Class #:')  # Parametros:  TABLA , NOMBRE DEL STRING
 
 
@@ -28,6 +30,12 @@ class Class(models.Model):
     student_ids = fields.One2many('student', 'class_id', 'List of Students') # Parametros: Tabla, relacion, Nombre del string
 
 
+class Tags(models.Model):
+    _name = 'student.tags'
+    _description = 'Tags'
+
+    name = fields.Char('Name')
+    color = fields.Integer('Color', default=1)
 
 
     #
