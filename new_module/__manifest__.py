@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Trade Manager",
-    'summary': "Trade Manager",
+    'name': "Students Manager",
+    'summary': "Student Manager",
     'author': "Cristina Barreno",
     'category': 'Stock',
     'depends': ['base'],
