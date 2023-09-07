@@ -12,12 +12,20 @@ class Student(models.Model):
     age = fields.Integer('Age')
     date_birth = fields.Date('Birth Date')
     register_date = fields.Datetime('Register Date')
-    value = fields.Float('Value')
-    active = fields.Boolean('Active')
+    value = fields.Float('Value', default=1.0)
+    active = fields.Boolean('Active', default=True)
+    priority = fields.Selection([('medium', 'Medium'), ('high', 'High')], 'Priority', default='medium')
+
 
     tag_ids = fields.Many2many('student.tags', 'student_tag_rel', 'student_id', 'tag_id', 'Tags') # Parametros Tabla, nombre de la relacion, fk1, fk2, Nombre del string
 
     class_id = fields.Many2one('class', 'Class #:')  # Parametros:  TABLA , NOMBRE DEL STRING
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = 'Nuevo alumno'
+        print('Nuevo alumno')
+        return super(Student, self).create(vals)
 
 
 class Class(models.Model):

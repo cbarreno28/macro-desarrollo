@@ -11,9 +11,12 @@
                         <group>
                             <field name="name"/>
                             <field name="age"/>
+                            <field name="active"/>
                         </group>
                         <group>
                             <field name="date_birth"/>
+                            <field name="register_date"/>
+                            <field name="priority"/>
                             <field name="tag_ids" widget="many2many_tags"/>
                         </group>
                     </group>
@@ -32,6 +35,7 @@
                 <field name="age"/>
                 <field name="date_birth"/>
                 <field name="tag_ids"/>
+                <field name="priority"/>
             </tree>
         </field>
     </record>
