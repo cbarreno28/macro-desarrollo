@@ -9,6 +9,7 @@
         'security/ir.model.access.csv',
 
         'views/student_views.xml',
+        'views/class_views.xml',
 
         'views/menu_views.xml'
     ],

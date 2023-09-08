@@ -16,8 +16,9 @@
                         <group>
                             <field name="date_birth"/>
                             <field name="register_date"/>
-                            <field name="priority"/>
+                            <field name="priority" widget="priority"/>
                             <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="campo_text"/>
                         </group>
                     </group>
                 </sheet>
@@ -34,7 +35,7 @@
                 <field name="name"/>
                 <field name="age"/>
                 <field name="date_birth"/>
-                <field name="tag_ids"/>
+                <field name="tag_ids" widget="many2many_tags"/>
                 <field name="priority"/>
             </tree>
         </field>

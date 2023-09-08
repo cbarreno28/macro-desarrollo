@@ -1,9 +1,22 @@
 <odoo>
     <data>
-        <menuitem id="menu_student_manager"
-                  name="Student Manager"
+            <menuitem id="my_menu"
+                  name="My academy"
                   sequence="10"
-                  groups="base.group_user"
-                  action="new_module.student_action"/>
+                  groups="base.group_user"/>
+
+            <menuitem id="menu_student_manager"
+                      name="Student Manager"
+                      sequence="10"
+                      groups="base.group_user"
+                      action="new_module.student_action"
+                      parent="new_module.my_menu"/>
+
+            <menuitem id="menu_class_manager"
+                      name="Class Manager"
+                      sequence="20"
+                      groups="base.group_user"
+                      action="new_module.class_action"
+                      parent="new_module.my_menu"/>
     </data>
 </odoo>
