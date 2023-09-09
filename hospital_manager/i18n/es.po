@@ -1,0 +1,204 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hospital_manager
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-09 16:59+0000\n"
+"PO-Revision-Date: 2023-09-09 16:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__address
+msgid "Address"
+msgstr "Direccion"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__number
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__code
+msgid "Code"
+msgstr "Codigo"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__create_uid
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__create_uid
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__create_uid
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__create_uid
+msgid "Created by"
+msgstr "Creado Por"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__create_date
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__create_date
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__create_date
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__date_birth
+msgid "Date Birth"
+msgstr "Fecha de nacimiento"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__display_name
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__display_name
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__display_name
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: hospital_manager
+#: model:ir.actions.act_window,name:hospital_manager.doctor_action
+#: model:ir.ui.menu,name:hospital_manager.doctor_menu
+msgid "Doctor"
+msgstr "Doctor"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__doctor_ids
+msgid "Doctors"
+msgstr "Doctores"
+
+#. module: hospital_manager
+#: model_terms:ir.ui.view,arch_db:hospital_manager.hospital_view_form
+msgid "Doctors List"
+msgstr "Lista de doctores"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__email
+msgid "Email"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__hospital_id
+#: model:ir.ui.menu,name:hospital_manager.hospital_menu
+msgid "Hospital"
+msgstr "Hospital"
+
+#. module: hospital_manager
+#: model:ir.actions.act_window,name:hospital_manager.hospital_action
+msgid "Hospital Ceibos"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.ui.menu,name:hospital_manager.hospital_manager_menu
+msgid "Hospital Manager"
+msgstr "Gestion de Hospital"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__id
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__id
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__id
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__id
+msgid "ID"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model.fields.selection,name:hospital_manager.selection__patient__type__iess
+msgid "IEES"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor____last_update
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality____last_update
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital____last_update
+#: model:ir.model.fields,field_description:hospital_manager.field_patient____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__write_uid
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__write_uid
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__write_uid
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__write_date
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__write_date
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__write_date
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hospital_manager
+#: model_terms:ir.ui.view,arch_db:hospital_manager.hospital_view_form
+msgid "Main Data"
+msgstr "Datos Principales"
+
+#. module: hospital_manager
+#: model:ir.model,name:hospital_manager.model_doctor
+msgid "Model Doctor"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model,name:hospital_manager.model_hospital
+msgid "Model Hospital"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model,name:hospital_manager.model_patient
+msgid "Model Patient"
+msgstr ""
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__name
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor_speciality__name
+#: model:ir.model.fields,field_description:hospital_manager.field_hospital__name
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: hospital_manager
+#: model:ir.model.fields.selection,name:hospital_manager.selection__patient__type__no_suscription
+msgid "No Suscription"
+msgstr "Sin seguro"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__number
+msgid "Number"
+msgstr "No."
+
+#. module: hospital_manager
+#: model:ir.actions.act_window,name:hospital_manager.patient_action
+#: model:ir.ui.menu,name:hospital_manager.patient_menu
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__phone
+msgid "Phone"
+msgstr "Telefono"
+
+#. module: hospital_manager
+#: model:ir.model.fields.selection,name:hospital_manager.selection__patient__type__private
+msgid "Private"
+msgstr "Privado"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_doctor__speciality_id
+msgid "Speciality"
+msgstr "Especialidad"
+
+#. module: hospital_manager
+#: model:ir.model.fields,field_description:hospital_manager.field_patient__type
+msgid "Suscription"
+msgstr "Tipo de Seguro"
+
+#. module: hospital_manager
+#: model:ir.model,name:hospital_manager.model_doctor_speciality
+msgid "doctor.speciality"
+msgstr ""
