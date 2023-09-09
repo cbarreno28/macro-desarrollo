@@ -11,6 +11,7 @@
                         <field name="number"/>
                         <!-- Agrego que el campo es requerido con el atributo required-->
                         <field name="name" required="1"/>
+                        <field name="hospital_id"/>
                         <field name="speciality_id"/>
                     </group>
                 </sheet>
@@ -26,6 +27,8 @@
             <tree>
                 <field name="number"/>
                 <field name="name"/>
+                <field name="hospital_id"/>
+                <field name="speciality_id"/>
             </tree>
         </field>
     </record>
