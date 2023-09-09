@@ -10,12 +10,12 @@ class Patient(models.Model):
     number = fields.Char('Number')
     name = fields.Char('Name')
     address = fields.Char('Address')
-    country_id = fields.Many2one('res.country', 'Country')
-    city_id = fields.Many2one('res.city', 'City')
+    # country_id = fields.Many2one('res.country', 'Country')
+    # city_id = fields.Many2one('res.city', 'City')
     email = fields.Char('Email')
     phone = fields.Char('Phone')
     type = fields.Selection([('iess', 'IEES'),
                              ('private', 'Private'),
-                             ('no_suscription', 'Suscription')], 'Suscription', default='no_suscription')
+                             ('no_suscription', 'No Suscription')], 'Suscription', default='no_suscription')
     active = fields.Boolean('Active', default=True)
     date_birth = fields.Date('Date Birth')
