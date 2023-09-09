@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    Menu Principal-->
+    <menuitem id="hospital_manager_menu"
+              sequence="10"
+              name="Hospital Manager"
+    />
+<!--    Submenu Hospital-->
+    <menuitem id="hospital_menu"
+              sequence="1"
+              name="Hospital"
+              action="hospital_manager.hospital_action"
+              parent="hospital_manager.hospital_manager_menu"
+    />
+</odoo>
