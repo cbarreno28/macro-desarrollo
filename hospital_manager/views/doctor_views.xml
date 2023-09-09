@@ -33,11 +33,31 @@
         </field>
     </record>
 
+   <!--Search-->
+    <record id="doctor_view_search" model="ir.ui.view">
+        <field name="name">doctor.search</field>
+        <field name="model">doctor</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="number"/>
+                <field name="name"/>
+                <field name="hospital_id"/>
+                <field name="speciality_id"/>
+                <group expand="0" string="Group By">
+                    <filter string="Speciality" name="speciality_id" context="{'group_by':'speciality_id'}"/>
+                    <filter string="Hospital" name="hospital_id" context="{'group_by':'hospital_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
     <!--Action-->
     <record id="doctor_action" model="ir.actions.act_window">
         <field name="name">Doctor</field>
         <field name="res_model">doctor</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="doctor_view_search"/>
         <field name="type">ir.actions.act_window</field>
     </record>
 

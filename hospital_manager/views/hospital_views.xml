@@ -37,6 +37,7 @@
         </field>
     </record>
 
+
     <!--Action-->
     <record id="hospital_action" model="ir.actions.act_window">
         <field name="name">Hospital Ceibos</field>

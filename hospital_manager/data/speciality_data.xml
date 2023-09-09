@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="speciality_01" model="doctor.speciality">
+        <field name="name">Alergología</field>
+<!--        <field name="field_name">Value</field>-->
+    </record>
+    <record id="speciality_02" model="doctor.speciality">
+        <field name="name">Anestesiología</field>
+    </record>
+    <record id="speciality_03" model="doctor.speciality">
+        <field name="name">Cardiología</field>
+    </record>
+    <record id="speciality_04" model="doctor.speciality">
+        <field name="name">Geriatría</field>
+    </record>
+    <record id="speciality_05" model="doctor.speciality">
+        <field name="name">Hematología</field>
+    </record>
+    <record id="speciality_06" model="doctor.speciality">
+        <field name="name">Medicina interna</field>
+    </record>
+</odoo>
