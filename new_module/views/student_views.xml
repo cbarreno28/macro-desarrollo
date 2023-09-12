@@ -20,6 +20,17 @@
                             <field name="tag_ids" widget="many2many_tags"/>
                             <field name="campo_text"/>
                         </group>
+                        <group>
+                            <field name="score_ids">
+                                <tree editable="top" create="false">
+                                    <field name="value_1"/>
+                                    <field name="value_2"/>
+                                    <field name="value_3"/>
+                                    <field name="total"/>
+                                    <field name="total_lbl"/>
+                                </tree>
+                            </field>
+                        </group>
                     </group>
                 </sheet>
             </form>

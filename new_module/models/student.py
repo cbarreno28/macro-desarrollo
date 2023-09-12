@@ -19,8 +19,15 @@ class Student(models.Model):
 
 
     tag_ids = fields.Many2many('student.tags', 'student_tag_rel', 'student_id', 'tag_id', 'Tags') # Parametros Tabla, nombre de la relacion, fk1, fk2, Nombre del string
-
     class_id = fields.Many2one('class', 'Class #:')  # Parametros:  TABLA , NOMBRE DEL STRING
+
+    score_ids = fields.One2many('score', 'student_id', 'Scores')
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = 'New name'
+        return super(Student, self).create(vals)
+
 
 
 class Class(models.Model):
