@@ -10,7 +10,7 @@ class Score(models.Model):
     value_1 = fields.Float('Value 1')
     value_2 = fields.Float('Value 2')
     value_3 = fields.Float('Value 3')
-    total = fields.Float('Total', compute='calculate_total')
+    total = fields.Float('Total', compute='calculate_total', store=True)
     total_lbl = fields.Char('TL', compute='calculate_total')
 
     student_id = fields.Many2one('student', 'Student')

@@ -1,21 +1,22 @@
 # -*- coding: utf-8 -*-
-
+# _inherit = ['mail.thread', 'mail.activity.mixin']
 from odoo import models, fields, _, api
-
+from odoo.exceptions import UserError
 
 class Student(models.Model):
     _name = 'student'
     _description = 'List of student'
- # _inherit = ''
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char('Name')
-    age = fields.Integer('Age')
+    name = fields.Char('Name', tracking=True, placeholder='Name')
+    age = fields.Integer('Age', tracking=True, required=True)
     date_birth = fields.Date('Birth Date')
     register_date = fields.Datetime('Register Date')
     value = fields.Float('Value', default=1.0)
     active = fields.Boolean('Active', default=True)
-    priority = fields.Selection([('medium', 'Medium'), ('high', 'High')], 'Priority', default='medium')
+    priority = fields.Selection([('low','Low'), ('medium', 'Medium'), ('high', 'High')], 'Priority', default='medium', tracking=True)
     campo_text = fields.Text('Campo tipo Text')
+    photo = fields.Binary('Photo')
 
 
     tag_ids = fields.Many2many('student.tags', 'student_tag_rel', 'student_id', 'tag_id', 'Tags') # Parametros Tabla, nombre de la relacion, fk1, fk2, Nombre del string
@@ -25,7 +26,8 @@ class Student(models.Model):
 
     @api.model
     def create(self, vals):
-        vals['name'] = 'New name'
+        if vals['age'] and vals['age'] >= 0:
+            raise UserError(_('La edad debe ser mayor a 0'))
         return super(Student, self).create(vals)
 
 

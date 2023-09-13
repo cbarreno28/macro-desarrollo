@@ -4,7 +4,7 @@
     'summary': "Student Manager",
     'author': "Cristina Barreno",
     'category': 'Stock',
-    'depends': ['base', 'contacts'],
+    'depends': ['base', 'contacts', 'mail'],
     'data': [
         'security/ir.model.access.csv',
 

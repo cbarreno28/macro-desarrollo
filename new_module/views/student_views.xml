@@ -9,7 +9,8 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name"/>
+                            <field name="photo" widget="image" class="oe_avatar"/>
+                            <field name="name" required="1"/>
                             <field name="age"/>
                             <field name="active"/>
                         </group>
@@ -23,16 +24,21 @@
                         <group>
                             <field name="score_ids">
                                 <tree editable="top" create="false">
-                                    <field name="value_1"/>
-                                    <field name="value_2"/>
+                                    <field name="value_1" sum="total_value_1"/>
+                                    <field name="value_2" sum="total_value_2"/>
                                     <field name="value_3"/>
-                                    <field name="total"/>
+                                    <field name="total" sum="subtotal"/>
                                     <field name="total_lbl"/>
                                 </tree>
                             </field>
                         </group>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>
