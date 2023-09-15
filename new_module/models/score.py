@@ -18,7 +18,7 @@ class Score(models.Model):
     @api.depends('value_1', 'value_2', 'value_3')
     def calculate_total(self):
         for record in self:
-            record.value_3 = 3
+            # record.value_3 = 3
             record.total = (record.value_1 + record.value_2 + record.value_3) / 3
             record.total_lbl = 'new label'
 

@@ -6,58 +6,76 @@
         <field name="model">student</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="register_user" string="Register User" type="object" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
                 <sheet>
-                    <group>
-                        <group>
-                            <field name="photo" widget="image" class="oe_avatar"/>
-                            <field name="name" required="1"/>
-                            <field name="age"/>
-                            <field name="active"/>
-                        </group>
+                    <field name="photo" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}"/>
+                    <div class="oe_title mb24">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group string="Datos Personales">
                         <group>
                             <field name="date_birth"/>
+                            <field name="email"/>
+                        </group>
+                        <group>
                             <field name="register_date"/>
-                            <field name="priority" widget="priority"/>
-                            <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="age"/>
+                        </group>
+                    </group>
+                    <group string="Curriculum">
+                        <group>
                             <field name="campo_text"/>
                         </group>
                         <group>
-                            <field name="score_ids">
-                                <tree editable="top" create="false">
-                                    <field name="value_1" sum="total_value_1"/>
-                                    <field name="value_2" sum="total_value_2"/>
-                                    <field name="value_3"/>
-                                    <field name="total" sum="subtotal"/>
-                                    <field name="total_lbl"/>
-                                </tree>
-                            </field>
+                            <field name="tag_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids"/>
-                    <field name="activity_ids"/>
-                    <field name="message_ids"/>
-                </div>
             </form>
         </field>
     </record>
 
-<!--Lista-->
+    <!--Lista-->
     <record id="student_view_tree" model="ir.ui.view">
-        <field name="name">student</field>
+        <field name="name">student.tree</field>
         <field name="model">student</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree create="0">
                 <field name="name"/>
-                <field name="age"/>
-                <field name="date_birth"/>
-                <field name="tag_ids" widget="many2many_tags"/>
-                <field name="priority"/>
+                <field name="identification"/>
             </tree>
         </field>
     </record>
 
+    <!--Search-->
+    <record id="student_view_search" model="ir.ui.view">
+        <field name="name">student.search</field>
+        <field name="model">student</field>
+        <field name="arch" type="xml">
+            <search>
+                <!--Busquedas-->
+                <field name="name"/>
+                <field name="email"/>
+                <field name="user_id"/>
+                <field name="identification"/>
+                <!-- Configurando filtros-->
+                <filter string="Registered" domain="[('state','=', 'registered')]" name="registered"/>
+                <filter string="New Student" domain="[('state','=', 'new')]" name="new_student"/>
+                <separator/>
+                <filter string="Created Date" date="create_date" name="creation_date"/>
+                <separator/>
+                <filter string="Archived" domain="[('active', '=', False)]" name="archived"/>
+                <group expand="0" string="Group By">
+                    <filter string="Group By State" name="group_by_state" context="{'group_by':'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 <!-- Action    -->
     <record id="student_action" model="ir.actions.act_window">
         <field name="name">Student</field>
