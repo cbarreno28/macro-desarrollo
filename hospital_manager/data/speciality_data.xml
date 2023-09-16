@@ -18,5 +18,26 @@
     </record>
     <record id="speciality_06" model="doctor.speciality">
         <field name="name">Medicina interna</field>
+        <field name="code">002</field>
+    </record>
+    <record id="speciality_07" model="doctor.speciality">
+        <field name="name">Medicina general</field>
+        <field name="code">001</field>
+    </record>
+
+    <record id="sequence_01" model="ir.sequence">
+        <field name="name">Emergencias</field>
+        <field name="code">adm.emergency</field>
+        <field name="prefix">E-</field>
+        <field name="padding">5</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="sequence_02" model="ir.sequence">
+        <field name="name">Internal</field>
+        <field name="code">adm.internal</field>
+        <field name="prefix">CI-</field>
+        <field name="padding">5</field>
+        <field name="number_increment">1</field>
     </record>
 </odoo>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form-->
+    <record id="admission_view_form" model="ir.ui.view">
+        <field name="name">admission.form</field>
+        <field name="model">admission</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="date"/>
+                            <field name="patient_number"/>
+                            <field name="patient_id"/>
+                        </group>
+                        <group>
+                            <field name="area"/>
+                            <field name="speciality_id"/>
+                        </group>
+                    </group>
+                    <group col="2">
+                        <field name="symptoms"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Tree-->
+    <record id="admission_view_tree" model="ir.ui.view">
+        <field name="name">admission.tree</field>
+        <field name="model">admission</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence"/>
+                <field name="date"/>
+                <field name="patient_number"/>
+                <field name="patient_id"/>
+                <field name="area"/>
+                <field name="speciality_id"/>
+                <field name="symptoms"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="admission_view_search" model="ir.ui.view">
+        <field name="name">admission.search</field>
+        <field name="model">admission</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="sequence"/>
+                <field name="date"/>
+                <field name="patient_number"/>
+                <field name="patient_id"/>
+                <field name="area"/>
+                <field name="speciality_id"/>
+                <filter name="date" date="date" string="Admission Date"/>
+            </search>
+        </field>
+    </record>
+
+
+    <!--Action-->
+    <record id="admission_action" model="ir.actions.act_window">
+        <field name="name">admission</field>
+        <field name="res_model">admission</field>
+        <field name="view_mode">tree,form</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+
+
+</odoo>

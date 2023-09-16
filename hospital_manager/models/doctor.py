@@ -18,3 +18,4 @@ class DoctorSpeciality(models.Model):
     _name = 'doctor.speciality'
 
     name = fields.Char('Name')
+    code = fields.Char('Code')

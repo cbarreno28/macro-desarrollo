@@ -3,7 +3,8 @@
 <!--    Menu Principal-->
     <menuitem id="hospital_manager_menu"
               sequence="10"
-              name="Hospital Manager"/>
+              name="Hospital Manager"
+              web_icon="hospital_manager,static/description/icon.png"/>
 
     <!--    Submenu Hospital-->
     <menuitem id="hospital_menu"
@@ -27,4 +28,13 @@
               action="hospital_manager.patient_action"
               parent="hospital_manager.hospital_manager_menu"
     />
+
+    <menuitem id="admission_menu"
+              sequence="1"
+              name="Admission"
+              action="hospital_manager.admission_action"
+              parent="hospital_manager.hospital_manager_menu"
+    />
+
+
 </odoo>
