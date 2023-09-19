@@ -25,6 +25,7 @@
                         <group>
                             <field name="register_date"/>
                             <field name="age"/>
+                            <field name="class_id"/>
                         </group>
                     </group>
                     <group string="Curriculum">
@@ -45,7 +46,7 @@
         <field name="name">student.tree</field>
         <field name="model">student</field>
         <field name="arch" type="xml">
-            <tree create="0">
+            <tree>
                 <field name="name"/>
                 <field name="identification"/>
             </tree>

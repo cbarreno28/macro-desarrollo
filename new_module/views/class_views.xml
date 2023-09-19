@@ -7,17 +7,22 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_call_students" type="object" class="oe_stat_button" icon="fa-sitemap">
+                            <span class="o_stat_text">Students</span>
+                        </button>
+                    </div>
                     <group>
                         <group>
                             <field name="year"/>
                             <field name="capacity"/>
                         </group>
                     </group>
-                    <notebook>
-                        <page name="student">
-                            <field name="student_ids"/>
-                        </page>
-                    </notebook>
+<!--                    <notebook>-->
+<!--                        <page name="student">-->
+<!--                            <field name="student_ids"/>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
                 </sheet>
             </form>
         </field>

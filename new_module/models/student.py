@@ -47,6 +47,14 @@ class Class(models.Model):
 
     student_ids = fields.One2many('student', 'class_id', 'List of Students') # Parametros: Tabla, relacion, Nombre del string
 
+    def action_call_students(self):
+        action = self.env['ir.actions.actions']._for_xml_id('new_module.student_action')
+        action['domain'] = [('class_id', '=', self.id)]
+        # domain [(condition1),(condition2)] => and
+        # domain ['|', (condition1), (condition2)] => or
+        action['context'] = {'default_class_id': self.id, 'default_priority': 'low'}
+        return action
+
 
 class Tags(models.Model):
     _name = 'student.tags'
