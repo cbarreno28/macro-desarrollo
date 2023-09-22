@@ -15,7 +15,7 @@
             <menuitem id="menu_class_manager"
                       name="Class Manager"
                       sequence="20"
-                      groups="base.group_user"
+                      groups="new_module.teacher_group"
                       action="new_module.class_action"
                       parent="new_module.my_menu"/>
     </data>

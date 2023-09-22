@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="register_user" string="Register User" type="object" class="oe_highlight"/>
+                    <button name="register_user" string="Register User" type="object" class="oe_highlight" groups="new_module.teacher_group"/>
                     <field name="state" widget="statusbar"/>
                 </header>
                 <sheet>

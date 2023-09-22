@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--Permisos: Estudiante, Profesor, Administrador-->
+    <data>
+        <record id="module_my_academy_category" model="ir.module.category">
+            <field name="name">My Academy</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="student_group" model="res.groups">
+            <field name="name">Estudiante</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_my_academy_category"/>
+        </record>
+        <record id="teacher_group" model="res.groups">
+            <field name="name">Profesor</field>
+            <field name="implied_ids" eval="[(4, ref('new_module.student_group'))]"/>
+            <field name="category_id" ref="module_my_academy_category"/>
+        </record>
+        <record id="administrator_group" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="implied_ids" eval="[(4, ref('new_module.teacher_group'))]"/>
+            <field name="category_id" ref="module_my_academy_category"/>
+        </record>
+
+        <record id="auditor_group" model="res.groups">
+            <field name="name">Auditor</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+    </data>
+</odoo>

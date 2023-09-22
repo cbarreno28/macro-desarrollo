@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_student_user,student,model_student,base.group_user,1,1,1,0
-access_class_user,student,model_class,base.group_user,1,1,1,0
 access_class_score,score,model_score,base.group_user,1,1,1,1
 access_student_tags_user,student_tags,model_student_tags,base.group_user,1,1,1,0
+access_class_teacher,teacher,model_class,new_module.teacher_group,1,0,0,0
+access_class_administrator,administrator,model_class,new_module.administrator_group,1,1,1,1
