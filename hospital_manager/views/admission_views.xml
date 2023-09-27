@@ -6,13 +6,17 @@
         <field name="model">admission</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="test_orm" string="Test ORM" type="object" class="oe_highlight"/>
+                </header>
                 <sheet>
                     <group>
                         <group>
                             <field name="sequence"/>
                             <field name="date"/>
+                            <field name="hospital_id"/>
                             <field name="patient_number"/>
-                            <field name="patient_id"/>
+                            <field name="patient_id" domain="[('is_patient','=',True)]" options="{'no_create': True, 'no_create_edit': True,'no_open': True}"/>
                         </group>
                         <group>
                             <field name="area"/>

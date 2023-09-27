@@ -7,6 +7,11 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_admission" type="object" class="oe_stat_button" icon="fa-sitemap">
+                            <span class="o_stat_text">Admission</span>
+                        </button>
+                    </div>
                     <group col="4" string="Main Data">
                         <field name="code"/>
                         <field name="name"/>
