@@ -3,7 +3,7 @@
     'name': "Hospital Manager",
     'summary': "Hospital Manager",
     'author': "Cristina Barreno",
-    'depends': ['base', 'contacts'],
+    'depends': ['base', 'contacts', 'report_xlsx'],
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
@@ -13,6 +13,7 @@
         'views/doctor_views.xml',
         'views/patient_views.xml',
         'views/admission_views.xml',
+        'views/report_views.xml',
         'views/menu_views.xml',
 
     ],
