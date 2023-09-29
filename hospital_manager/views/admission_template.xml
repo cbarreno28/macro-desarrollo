@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="admission_report_qweb">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Admission</h2>
+                        <div class="row">
+                            <div class="col-auto col-6">
+                                <span class="text-primary">Nombre de Ficha:</span><t t-esc="o.sequence"/>
+                                <span>Hospital:</span><t t-esc="o.hospital_id.name"/>
+                            </div>
+                            <div class="col-auto col-6">
+                                <span class="text-success">Cedula:</span><t t-esc="o.patient_number"/>
+                                <span>Paciente:</span><t t-esc="o.patient_id.name"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_admission" model="ir.actions.report">
+        <field name="name">Admission Qweb</field>
+        <field name="model">admission</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hospital_manager.admission_report_qweb</field>
+        <field name="report_file">hospital_manager.admission_report_qweb</field>
+        <field name="print_report_name">'Admission - %s' % (object.sequence)</field>
+        <field name="binding_model_id" ref="model_admission"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

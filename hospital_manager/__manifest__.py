@@ -14,6 +14,7 @@
         'views/patient_views.xml',
         'views/admission_views.xml',
         'views/report_views.xml',
+        'views/admission_template.xml',
         'views/menu_views.xml',
 
     ],
